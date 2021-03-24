@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">ToDoProject</string>
     <string name="description">Description</string>
+
+    <string-array name="snooze_options">
+        <item>10 Minutes</item>
+        <item>30 Minutes</item>
+        <item>1 Hour</item>
+    </string-array>
 </resources>
