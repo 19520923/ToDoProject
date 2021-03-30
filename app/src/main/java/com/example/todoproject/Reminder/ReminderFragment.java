@@ -45,7 +45,7 @@ public class ReminderFragment extends AppDefaultFragment {
     private StoreRetrieveData storeRetrieveData;
     private ArrayList<ToDoItem> mToDoItems;
     private ToDoItem mItem;
-    private static final String EXIT = "com.todoproject.exit";
+    public static final String EXIT = "com.todoproject.exit";
     private TextView mSnoozeTextView;
     String theme;
 
@@ -103,7 +103,7 @@ public class ReminderFragment extends AppDefaultFragment {
      }
 
      @Override
-    protected int layoutRes(){return R.layout.fragment_reminder}
+    protected int layoutRes(){return R.layout.fragment_reminder;}
     private void closeApp() {
         Intent i = new Intent(getContext(), MainActivity.class);
         i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -114,11 +114,11 @@ public class ReminderFragment extends AppDefaultFragment {
         startActivity(i);
     }
 
-    public boolean onCreateOptionsMenu(Menu menu)
+    /*public boolean onCreateOptionsMenu(Menu menu)
     {
         getActivity().getMenuInflater().inflate(R.menu_reminder,menu);
         return true;
-    }
+    }*/
 
     private void changedOccurred()
     {
@@ -149,7 +149,7 @@ public class ReminderFragment extends AppDefaultFragment {
         }
     }
 
-    @Override
+    /*@Override
     public boolean onOptionsItemSelected(MenuItem item ) {
         switch (item.getItemId()) {
             case R.id.toDoReminderDoneMenuItem:
@@ -166,7 +166,7 @@ public class ReminderFragment extends AppDefaultFragment {
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
+    }*/
 
     private void saveData(){
         try {

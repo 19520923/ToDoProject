@@ -3,10 +3,11 @@ package com.example.todoproject.Main;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-import android.widget.Toolbar;
+
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import com.example.todoproject.R;
@@ -28,9 +29,9 @@ public class MainActivity extends AppDefaultActivity {
 
     @NonNull
     @Override
-    protected Fragment createInitialFragment(){return MainFragment.newInstance();}
+    protected Fragment createInitialFragment(){return MainFragment.newInstance();}}
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
@@ -53,3 +54,5 @@ public class MainActivity extends AppDefaultActivity {
         }
     }
 }
+
+     */
