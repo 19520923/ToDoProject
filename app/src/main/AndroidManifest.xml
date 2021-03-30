@@ -9,9 +9,10 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/CustomStyle.DarkTheme">
+        android:theme="@style/CustomStyle.LightTheme">
 
-        <activity android:name=".Main.MainActivity"
+        <activity
+            android:name=".Main.MainActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
             <intent-filter>

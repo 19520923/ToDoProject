@@ -1,52 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android = "http://schemas.android.com/apk/res/android"
-    xmlns:app = "http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
-    >
+    android:orientation="vertical">
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/myCoordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/myCoordinatorLayout"
-        android:gravity = "center">
+        android:gravity="center">
+
         <LinearLayout
+            android:id="@+id/toDoEmptyView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/toDoEmptyView"
+            android:gravity="center"
             android:orientation="vertical"
-            android:gravity="center">
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/empty_view_bg" />
+                android:src="@drawable/empty_view_bg"
+                android:contentDescription="TODO"
+                android:layout_gravity="center"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="You don't have any todos"
-                android:textColor="@color/secondary_text"
-                android:textSize="16sp"
+                android:gravity="center"
                 android:paddingTop="4dp"
                 android:paddingBottom="8dp"
-                android:gravity="center"/>
+                android:text="You don't have any things"
+                android:textColor="@color/secondary_text"
+                android:textSize="16sp" />
         </LinearLayout>
+
         <com.example.todoproject.Utility.RecyclerViewEmptySupport
+            android:id="@+id/toDoRecycleView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/toDoRecycleView"
-            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addToDoItemFAB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_add_white_24dp"
-            android:id="@+id/addToDoItemFAB"
+            android:layout_gravity="bottom|right|end"
             android:layout_margin="16dp"
-            android:layout_gravity="bottom|end" />
+            android:src="@drawable/ic_add_white_24dp" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </LinearLayout>
